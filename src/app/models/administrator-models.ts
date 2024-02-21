@@ -1,5 +1,5 @@
 export class AdministratorModels {
-
+    
     //Atributtes
     private id:number;
     private last_name:string;
