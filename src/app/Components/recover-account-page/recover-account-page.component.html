@@ -23,7 +23,7 @@
   
   
                   <!--Formulario reactivo - inicio------------------------------------------------->
-                  <form>
+                  <form [formGroup]="recoverForm" (ngSubmit)="recoverAccount()">
   
                     <div class="d-flex align-items-center mb-3 pb-1">
                       <i class="fas fa-cubes fa-2x me-3" style="color: #a14317;"> $ </i>
@@ -35,14 +35,15 @@
                     <div class="form-outline mb-3">
                       <label class="form-label" for="form2Example17">usuario o email</label>
                       <input type="email" id="form2Example17" class="form-control form-control-lg"
-                        placeholder="Ejemplo: MiUsuario@gmail.com" />
+                        placeholder="Ejemplo: MiUsuario@gmail.com" formControlName="user"/>
                     </div>
 
                     <div class="pt-1 mb-4">
-                      <button class="btn btn-dark btn-lg btn-block" type="button">Recuperar contraseña</button>
+
+                      <button class="btn btn-dark btn-lg btn-block" type="submit" [disabled]="recoverForm.invalid">Recuperar contraseña</button>
 
                       &nbsp;
-                      <button class="btn btn-dark btn-lg btn-block" type="button" routerLink="/">Regresar</button>
+                      <button class="btn btn-dark btn-lg btn-block" type="button" routerLink="/loggin">Regresar</button>
                     </div>
   
                   </form>
