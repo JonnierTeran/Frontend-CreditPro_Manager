@@ -55,7 +55,7 @@
                     <div class="card-body px-4 py-5 px-md-5">
 
                         <!-------------Inicio de Formularioo --------------------------------------->
-                        <form>
+                        <form [formGroup] = "singUpForm" (ngSubmit)="registrarAdmin()">
 
                             <h4 class="text-center ">REGISTRO DE ADMINISTRADORES</h4>
                             <br>
@@ -63,8 +63,8 @@
                             <!-- Email input -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form3Example3">CC - identificación</label>
-                                <input type="number" id="form3Example3" class="form-control"
-                                    placeholder="Ejemplo: 1026875499" />
+                                <input type="number" id="form3Example0" class="form-control"
+                                    placeholder="Ejemplo: 1026875499" formControlName = "identificacion"/>
                             </div>
 
                             <!-- 2 column grid layout with text inputs for the first and last names -->
@@ -73,14 +73,14 @@
                                     <div class="form-outline">
                                         <label class="form-label" for="form3Example1">Nombres</label>
                                         <input type="text" id="form3Example1" class="form-control"
-                                            placeholder="Ejemplo: Administrador 1" />
+                                            placeholder="Ejemplo: Administrador 1" formControlName = "name"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="form3Example2">Apellidos</label>
                                         <input type="text" id="form3Example2" class="form-control"
-                                            placeholder="Ejemplo: Admin ejemplo" />
+                                            placeholder="Ejemplo: Admin ejemplo" formControlName = "lastName"/>
                                     </div>
                                 </div>
                             </div>
@@ -89,32 +89,36 @@
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form3Example3">Usuario o email</label>
                                 <input type="email" id="form3Example3" class="form-control"
-                                    placeholder="Ejemplo: AdministradorCuentas@gmail.com" />
+                                    placeholder="Ejemplo: AdministradorCuentas@gmail.com" formControlName = "email">
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form3Example4">Contraseña</label>
                                 <input type="password" id="form3Example4" class="form-control"
-                                    placeholder="*************************" />
+                                    placeholder="*************************" formControlName = "password"/>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form3Example4">Confirme la contraseña</label>
-                                <input type="password" id="form3Example4" class="form-control"
-                                    placeholder="*************************" />
+                                <input type="password" id="form3Example5" class="form-control"
+                                    placeholder="*************************" formControlName = "passwordConfirm"/>
                             </div>
 
-
-
+                            @if(passwordAlert){
+                                  <div class="alert alert-danger" role="alert">
+                                   Las contraseñas no coinciden, por favor Ingresa 2 contraseñas iguales.
+                                  </div>
+                                 
+                                }
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4">
+                            <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="singUpForm.invalid">
                                 Registrar Administrador
                             </button>
 
                             &nbsp; &nbsp;
-                            <button type="submit" class="btn btn-primary btn-block mb-4" routerLink="/loggin">
+                            <button type="button" class="btn btn-primary btn-block mb-4" routerLink="/loggin">
                                 Ir a inicio de Sessión
                             </button>
 

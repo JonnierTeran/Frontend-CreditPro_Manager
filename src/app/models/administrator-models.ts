@@ -2,15 +2,16 @@ export class AdministratorModels {
     
     //Atributtes
     private identificacion:number;
-    private last_name:string;
     private name: string;
+    private lastName:string;
     private password:string;
     private user:string;
 
+  
     //Constructor Method
     public constructor(identificacion:number, lastName:string, name:string, password:string, user:string){
         this.identificacion = identificacion;
-        this.last_name = lastName;
+        this.lastName = lastName;
         this.name = name;
         this.password = password;
         this.user = user;
@@ -26,11 +27,11 @@ export class AdministratorModels {
     }
 
     public setLast_Name(LastName:string):void{
-        this.last_name = LastName;
+        this.lastName = LastName;
     }
 
     public getLastName():string{
-        return this.last_name;
+        return this.lastName;
     }
 
     public setName(Name:string):void{
@@ -43,7 +44,7 @@ export class AdministratorModels {
 
     
     public setUser(user:string):void{
-        this.last_name = user;
+        this.user = user;
     }
 
     public getUser():string{

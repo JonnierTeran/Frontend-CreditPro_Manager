@@ -1,7 +1,7 @@
 // Clase para modelas una respuesta desde el backend
 export class ResponseModels {
     //Propiedad mensaje
-    private message: string;
+    public message: string;
 
     constructor(message: string) {
         this.message = message;
