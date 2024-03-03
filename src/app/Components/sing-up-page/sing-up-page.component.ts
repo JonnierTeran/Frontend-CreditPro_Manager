@@ -28,7 +28,8 @@ export class SingUpPageComponent {
       lastName: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
       password: ["", Validators.required],
-      passwordConfirm: ["", Validators.required]
+      passwordConfirm: ["", Validators.required],
+      apiKey: [""]
     });
 
     this.passwordAlert = false;
@@ -44,7 +45,7 @@ export class SingUpPageComponent {
 
       let Admin: AdministratorModels = new AdministratorModels(this.singUpForm.get('identificacion')!.value,
         this.singUpForm.get('lastName')!.value, this.singUpForm.get('name')!.value, this.singUpForm.get('password')!.value,
-        this.singUpForm.get('email')!.value);
+        this.singUpForm.get('email')!.value,this.singUpForm.get('apiKey')!.value);
 
       this._administratorService.saveAdmin(Admin).subscribe(
         
