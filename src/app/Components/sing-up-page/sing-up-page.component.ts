@@ -17,8 +17,8 @@ import { AdministratorService } from '../../services/Administrator/administrator
 export class SingUpPageComponent {
 
   public singUpForm: FormGroup;
-
   public passwordAlert: Boolean;
+  public loadingButton: string;
 
   constructor(private _formBulder: FormBuilder, private _administratorService: AdministratorService) {
 
@@ -33,6 +33,7 @@ export class SingUpPageComponent {
     });
 
     this.passwordAlert = false;
+    this.loadingButton = "Registrar Administrador";
   }
 
 
@@ -40,6 +41,8 @@ export class SingUpPageComponent {
 
 
   public registrarAdmin(): void {
+
+    this.loadingButton = "Cargando..."
 
     if (this.singUpForm.get('password')!.value == this.singUpForm.get('passwordConfirm')!.value) {
 
@@ -51,6 +54,8 @@ export class SingUpPageComponent {
         
         // Función de éxito (Res es la respuesta de la API)
         Next => {
+
+          this.loadingButton = "Registrar Administrador";
 
           const Toast = Swal.mixin({
             toast: true,
@@ -73,6 +78,7 @@ export class SingUpPageComponent {
         },
         // Función de error (Err contiene información sobre el error)
         Error => {
+          this.loadingButton = "Registrar Administrador";
           // Imprimir el error en la consola
           Swal.fire({
             icon: "error",
