@@ -21,6 +21,11 @@ export class AdministratorService {
   }
 
   public getAdminEmail(email: string): Observable<AdministratorModels> {
-    return this._httpClient.get<AdministratorModels>("http://localhost:8080/App/Administrator/QueriesAdministrator/getAdmin/"+email);
+    return this._httpClient.get<AdministratorModels>(this.apiUrl +"/QueriesAdministrator/getAdmin/"+email);
   }
+
+  public getResponseRecoverAcount(email: string): Observable<ResponseModels> {
+    return this._httpClient.get<ResponseModels>(this.apiUrl + "/RecoverAccount/RecoverAccount/"+email);
+  }
+
 }
