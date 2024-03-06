@@ -17,6 +17,10 @@ export class AdministratorService {
   }
 
   public saveAdmin(Admin: AdministratorModels): Observable<ResponseModels> {
-    return this._httpClient.post<ResponseModels>("http://localhost:8080/App/Administrator/saveAdmin", Admin);
+    return this._httpClient.post<ResponseModels>(this.apiUrl + "/SaveAdministrator/saveAdmin", Admin);
+  }
+
+  public getAdminEmail(email: string): Observable<AdministratorModels> {
+    return this._httpClient.get<AdministratorModels>("http://localhost:8080/App/Administrator/QueriesAdministrator/getAdmin/"+email);
   }
 }

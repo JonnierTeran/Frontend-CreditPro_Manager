@@ -1,10 +1,10 @@
 export class AdministratorModels {
     
     //Atributtes
-    private identificacion:number;
+    public identificacion:number;
     private name: string;
     private lastName:string;
-    private password:string;
+    public password:string;
     private user:string;
     private apiKeyResend?:string;
 
@@ -28,7 +28,7 @@ export class AdministratorModels {
         return this.identificacion;
     }
 
-    public setLast_Name(LastName:string):void{
+    public setLastName(LastName:string):void{
         this.lastName = LastName;
     }
 
@@ -57,7 +57,7 @@ export class AdministratorModels {
         this.password = password;
     }
 
-    public getpassword():string{
+    public getPassword():String{
         return this.password;
     }
 

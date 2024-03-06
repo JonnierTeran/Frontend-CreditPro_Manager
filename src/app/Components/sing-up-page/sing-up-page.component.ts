@@ -20,16 +20,16 @@ export class SingUpPageComponent {
   public passwordAlert: Boolean;
   public loadingButton: string;
 
-  constructor(private _formBulder: FormBuilder, private _administratorService: AdministratorService) {
+  constructor(private _formBuilder: FormBuilder, private _administratorService: AdministratorService) {
 
-    this.singUpForm = this._formBulder.group({
+    this.singUpForm = this._formBuilder.group({
       identificacion: ["", Validators.required],
       name: ["", Validators.required],
       lastName: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
       password: ["", Validators.required],
       passwordConfirm: ["", Validators.required],
-      apiKey: [""]
+      apiKey: [null]
     });
 
     this.passwordAlert = false;
