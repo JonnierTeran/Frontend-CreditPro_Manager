@@ -1,19 +1,22 @@
 export class AdministratorModels {
-
+    
     //Atributtes
-    private identificacion:number;
-    private last_name:string;
+    public identificacion:number;
     private name: string;
-    private password:string;
+    private lastName:string;
+    public password:string;
     private user:string;
+    private apiKeyResend?:string;
 
+  
     //Constructor Method
-    public constructor(identificacion:number, lastName:string, name:string, password:string, user:string){
+    public constructor(identificacion:number, lastName:string, name:string, password:string, user:string, apiKeyResend?:string){
         this.identificacion = identificacion;
-        this.last_name = lastName;
+        this.lastName = lastName;
         this.name = name;
         this.password = password;
         this.user = user;
+        this.apiKeyResend = apiKeyResend;
     }
 
     //Getter and Setter
@@ -25,12 +28,12 @@ export class AdministratorModels {
         return this.identificacion;
     }
 
-    public setLast_Name(LastName:string):void{
-        this.last_name = LastName;
+    public setLastName(LastName:string):void{
+        this.lastName = LastName;
     }
 
     public getLastName():string{
-        return this.last_name;
+        return this.lastName;
     }
 
     public setName(Name:string):void{
@@ -43,7 +46,7 @@ export class AdministratorModels {
 
     
     public setUser(user:string):void{
-        this.last_name = user;
+        this.user = user;
     }
 
     public getUser():string{
@@ -54,7 +57,15 @@ export class AdministratorModels {
         this.password = password;
     }
 
-    public getpassword():string{
+    public getPassword():String{
         return this.password;
+    }
+
+    public setApiKeyResend(apiKeyResend: string) {
+        this.apiKeyResend = apiKeyResend;
+    }
+
+    public getApiKeyResend(): string | undefined {
+        return this.apiKeyResend;
     }
 }
