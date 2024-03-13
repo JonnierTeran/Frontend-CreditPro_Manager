@@ -61,7 +61,7 @@ export class SingUpPageComponent {
             toast: true,
             position: "center",
             showConfirmButton: false,
-            timer: 3000,
+            timer: 5000,
             timerProgressBar: true,
             didOpen: (toast) => {
               toast.onmouseenter = Swal.stopTimer;
@@ -98,6 +98,8 @@ export class SingUpPageComponent {
       setTimeout(() => {
         this.passwordAlert = false;
       }, 3500);
+
+      this.loadingButton = "Registrar Administrador";
 
     }
   }
