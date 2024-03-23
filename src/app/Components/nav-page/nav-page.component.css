@@ -1,0 +1,15 @@
+.Active{
+    color: rgb(8, 8, 8);
+    text-decoration: solid;
+    font-family: 'Montserrat', sans-serif; /* Ejemplo de una tipografía llamativa */
+    font-size: 18px;
+    font-weight: bold;
+    /*text-decoration: underline;*/
+    cursor: pointer;
+    font-style: italic;
+    text-shadow: 3px 3px 10px rgba(240, 236, 1, 0.932); /* Sombra negra con desplazamiento de 2px horizontal y 2px vertical */
+   /* background-color: #adad61; /* Fondo amarillo */
+    padding: 3px;
+    animation: animacionTexto 2s infinite alternate; /* Ejemplo de animación */
+
+}

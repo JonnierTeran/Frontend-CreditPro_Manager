@@ -12,30 +12,51 @@
 
         <!------------Cards Clientes Generales ----------------------->
         <div class="col">
-            <div class="card h-100 d-flex align-items-stretch">
+            <div class="card h-100 d-flex flex-column justify-content-between">
                 <div class="card-body">
-                    <h5 class="card-title">Clientes 1</h5>
-                    <p class="card-text">Aquí puedes mostrar información relacionada con tus clientes.</p>
+                    <h5 class="card-title"><i class="bi bi-person-workspace"></i> Total Clientes</h5>
+                    <hr>
+                    <p class="card-text">Cantidad de clientes Registrados en el software: <b> 15</b></p>
+                </div>
+
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Registrar Cliente" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i>
+                        Registrar Cliente</button>
+                    <button title="Ver mis clientes" class="btn btn-secondary"><i class="bi bi-person-lines-fill"></i>
+                        Ver Clientes</button>
                 </div>
             </div>
         </div>
+
 
         <!-----------------Cards Clientes 2 ----->
         <div class="col">
             <div class="card h-100 d-flex align-items-stretch">
                 <div class="card-body">
-                    <h5 class="card-title">Clientes 2</h5>
-                    <p class="card-text">Aquí puedes mostrar información relacionada con tus clientes.</p>
+                    <h5 class="card-title"><i class="bi bi-person-check"></i> Clientes con Creditos Activos</h5>
+                    <hr>
+                    <p class="card-text">Cantidad de clientes con creditos Activos al dia de hoy: <b> 8 </b></p>
+                </div>
+
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Clientes con creditos Activos" class="btn btn-primary"><i
+                            class="bi bi-person-lines-fill"></i> Ver Clientes con creditos Activos</button>
                 </div>
             </div>
         </div>
 
-        <!-----------------Cards Clientes 2 ----->
+        <!-----------------Cards Clientes 3 ----->
         <div class="col">
             <div class="card h-100 d-flex align-items-stretch">
                 <div class="card-body">
-                    <h5 class="card-title">Clientes 3</h5>
-                    <p class="card-text">Aquí puedes mostrar información relacionada con tus clientes.</p>
+                    <h5 class="card-title"><i class="bi bi-cash-coin"></i> Catidad de dinero financiado</h5>
+                    <hr>
+                    <p class="card-text">Todos tus creditos activos actuales corresponen a la suma de : <b>{{money |
+                            currency }}</b> </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Gestionar Creditos" class="btn btn-primary"><i class="bi bi-cash-stack"></i>
+                        Gestionar mis creditos</button>
                 </div>
             </div>
         </div>
@@ -57,41 +78,64 @@
         <div class="col">
             <div class="card h-100 d-flex align-items-stretch">
                 <div class="card-body">
-                    <h5 class="card-title">Créditos 1</h5>
-                    <p class="card-text">Aquí puedes mostrar información sobre los créditos.</p>
+                    <h5 class="card-title"><i class="bi bi-credit-card-2-back"></i> Créditos Totales</h5>
+                    <hr>
+                    <p class="card-text">Cantidad de creditos registrados en el software: <b> 18 </b></p>
+                </div>
+
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Registrar Credito" class="btn btn-primary"><i class="bi bi-patch-plus-fill"></i>
+                        Registrar Credito</button>
+                    <button title="Ver mis Creditos" class="btn btn-secondary"><i class="bi bi-list-columns-reverse"></i>
+                        Ver Creditos</button>
                 </div>
             </div>
         </div>
-
 
         <!-------------- Cards de Créditos 2 -------------->
         <div class="col">
             <div class="card h-100 d-flex align-items-stretch">
                 <div class="card-body">
-                    <h5 class="card-title">Créditos 2</h5>
-                    <p class="card-text">Aquí puedes mostrar información sobre los créditos.</p>
+                    <h5 class="card-title"><i class="bi bi-credit-card-2-back"></i> Créditos de Pagós Diarios</h5>
+                    <hr>
+                    <p class="card-text">Cantidad de creditos de pagos diarios activos: <b> 9 </b></p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Creditos de pagos diarios" class="btn btn-primary"><i class="bi bi-list-columns-reverse"></i> Ver Creditos de Pagos Diarios</button>
                 </div>
             </div>
         </div>
 
 
         <!-------------- Cards de Créditos 3-------------->
+
         <div class="col">
             <div class="card h-100 d-flex align-items-stretch">
                 <div class="card-body">
-                    <h5 class="card-title">Créditos 3</h5>
-                    <p class="card-text">Aquí puedes mostrar información sobre los créditos.</p>
+                    <h5 class="card-title"><i class="bi bi-credit-card-2-back"></i> Créditos de Interes Mensual</h5>
+                    <hr>
+                    <p class="card-text">Cantidad de creditos de interes mensual activos: <b> 5 </b> </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Creditos de interes mensual" class="btn btn-primary"><i class="bi bi-list-columns-reverse"></i> Ver Creditos de Interes
+                        Mensual</button>
                 </div>
             </div>
         </div>
+
+
 
 
         <!-------------- Cards de Créditos 4-------------->
         <div class="col">
             <div class="card h-100 d-flex align-items-stretch">
                 <div class="card-body">
-                    <h5 class="card-title">Créditos 4</h5>
-                    <p class="card-text">Aquí puedes mostrar información sobre los créditos.</p>
+                    <h5 class="card-title"><i class="bi bi-credit-card-2-back"></i> Créditos Activos</h5>
+                    <hr>
+                    <p class="card-text">Cantidad de creditos activos por los clientes: <b> 7 </b></p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Creditos Activos" class="btn btn-primary"><i class="bi bi-list-columns-reverse"></i> Ver Creditos Activos </button>
                 </div>
             </div>
         </div>
@@ -101,8 +145,12 @@
         <div class="col">
             <div class="card h-100 d-flex align-items-stretch">
                 <div class="card-body">
-                    <h5 class="card-title">Créditos 5</h5>
-                    <p class="card-text">Aquí puedes mostrar información sobre los créditos.</p>
+                    <h5 class="card-title"><i class="bi bi-credit-card-2-back"></i> Créditos Activos - Renovados</h5>
+                    <hr>
+                    <p class="card-text">Cantidad de creditos Renovados por incumplimiento de fechas de pago: <b> 15 </b> </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Creditos Renovados" class="btn btn-primary"><i class="bi bi-list-columns-reverse"></i> Ver Creditos Renovados</button>
                 </div>
             </div>
         </div>
@@ -112,8 +160,12 @@
         <div class="col">
             <div class="card h-100 d-flex align-items-stretch">
                 <div class="card-body">
-                    <h5 class="card-title">Créditos 6</h5>
-                    <p class="card-text">Aquí puedes mostrar información sobre los créditos.</p>
+                    <h5 class="card-title"><i class="bi bi-credit-card-2-back"></i> Créditos Finalizados</h5>
+                    <hr>
+                    <p class="card-text">Cantidad de creditos finalizados por los Clientes: <b> 88</b></p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button title="Creditos Finalizados" class="btn btn-primary"><i class="bi bi-list-columns-reverse"></i> Ver Creditos Finalizados</button>
                 </div>
             </div>
         </div>

@@ -26,7 +26,6 @@ export class NavPageComponent implements OnInit {
     //Metodo que se ejecuta cada 1000ms
     setInterval(() => { //Arrow functions que formatea y ejecuta la hora local en la variable reloj
       moment.locale("es")
-      //this.reloj = moment().format('MMMM Do YYYY, h:mm:ss a');
       const hoy = Date.now();                // obtenemos la fecha actual
       this.dateTime = moment(hoy).format("YYYY-MM-DD - hh:mm:ss A"); // 2021-02-16 05:46 PM
     }, 1000);

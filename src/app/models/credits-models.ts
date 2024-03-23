@@ -13,12 +13,13 @@ export class CreditosModels {
     private interest: number;
     private status: string;
     private total_debt: number;
+    private typeCredit:string;
     private id_admin: AdministratorModels;
     private id_client: ClientsModels;
 
 
     //Constructor
-    public constructor(code: number, observations: string, renovated: boolean, credit_amount: number, finish_date: Date, initial_date: Date, interest: number, status: string, total_debt: number, id_admin: AdministratorModels, id_cliente: ClientsModels) {
+    public constructor(code: number, observations: string, renovated: boolean, credit_amount: number, finish_date: Date, initial_date: Date, interest: number, status: string, total_debt: number, typeCredit:string, id_admin: AdministratorModels, id_cliente: ClientsModels) {
         this.code = code;
         this.observations = observations;
         this.renovated = renovated;
@@ -28,6 +29,7 @@ export class CreditosModels {
         this.interest = interest;
         this.status = status;
         this.total_debt = total_debt;
+        this.typeCredit = typeCredit;
         this.id_admin = id_admin;
         this.id_client = id_cliente;
     }
@@ -103,6 +105,14 @@ export class CreditosModels {
 
     public getTotal_debt(): number {
         return this.total_debt;
+    }
+
+    public setTypeCredit(typeCredit:string):void{
+        this.typeCredit = typeCredit;
+    }
+
+    public getTypeCredit():string{
+        return this.typeCredit;
     }
 
     public setId_admin(id_admin: AdministratorModels): void {
