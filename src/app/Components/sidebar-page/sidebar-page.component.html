@@ -1,0 +1,119 @@
+<!----------------------- CONTENEDOR PARA EL MENU LATERAL SIDE BAR ------------------------------------->
+<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+
+    <!---------------- encabezado del menu ------------->
+    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <br><br><br><br>
+        <span class="fs-5 d-none d-sm-inline">
+            CREDIT PRO &nbsp; MANAGER
+        </span> </a>
+
+
+    <!---------------------Lista de items del menu ------------------------->
+
+    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+
+        <!--------------------------Item de inicio ------------------------------->
+        <li class="nav-item">
+            <a href="#" class="nav-link align-middle px-0" routerLinkActive="Active" routerLink="/Home/Inicio">
+                <i class="bi bi-house fs-4"></i> <span class="ms-1 d-none d-sm-inline">&nbsp; Inicio</span>
+            </a>
+        </li>
+
+        <!----------------------Item de Administracion----------------------------->
+        <li class="nav-item">
+            <a href="#" class="nav-link align-middle px-0" routerLinkActive="Active" routerLink="/Home/Administration">
+                <i class="bi bi-speedometer2 fs-4"></i><span class="ms-1 d-none d-sm-inline"> Administración</span>
+            </a>
+        </li>
+
+        <!----------------------Item de Clientes----------------------------->
+        <li>
+            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                <i class="bi bi-people fs-4"></i> <span class="ms-1 d-none d-sm-inline"> Clientes</span>
+            </a>
+            <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                <li class="w-100">
+                    <a href="#" class="nav-link px-0"> &nbsp; <i class="bi bi-person"></i> <span
+                            class="d-none d-sm-inline"> Mis Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-0">&nbsp; <i class="bi bi-person-plus"></i> <span
+                            class="d-none d-sm-inline"> Registrar Clientes</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="#" class="nav-link px-0"> &nbsp; <i class="bi bi-person"></i> <span
+                            class="d-none d-sm-inline"> Historial de Clientes</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+        <!----------------------Item de Creditos----------------------------->
+
+        <li>
+            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                <i class="bi bi-credit-card fs-4"></i> <span class="ms-1 d-none d-sm-inline"> Creditos </span>
+            </a>
+            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                <li class="w-100">
+                    <a href="#" class="nav-link px-0"> &nbsp; <i class="bi bi-person"></i> <span
+                            class="d-none d-sm-inline"> Hisotrial de Creditos</span>
+                    </a>
+                </li>
+                <li class="w-100">
+                    <a href="#" class="nav-link px-0"> &nbsp; <i class="bi bi-person"></i> <span
+                            class="d-none d-sm-inline"> Creditos Activos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-0">&nbsp; <i class="bi bi-person-plus"></i> <span
+                            class="d-none d-sm-inline"> Creditos Renovados</span></a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-0">&nbsp; <i class="bi bi-person-plus"></i> <span
+                            class="d-none d-sm-inline"> Creditos Finalizados</span></a>
+                </li>
+            </ul>
+        </li>
+
+        <!----------------------Item de Pagos-------------------------------->
+        <li>
+            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                <i class="bi bi-cash-coin fs-4"></i> <span class="ms-1 d-none d-sm-inline"> Pagos</span></a>
+            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                <li class="w-100">
+                    <a href="#" class="nav-link px-0"><i class="bi bi-currency-dollar"></i> <span
+                            class="d-none d-sm-inline"> Registrar Pago</span></a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-0"> <i class="bi bi-list-ol"></i><span class="d-none d-sm-inline">
+                            Historial De Pagos</span></a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+
+
+    <hr>
+    <div class="dropdown pb-4">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+            <span class="d-none d-sm-inline mx-1"> &nbsp; {{userName}}</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">Ver Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Actualizar Datos</a></li>
+            <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Salir</a></li>
+        </ul>
+    </div>
+</div>

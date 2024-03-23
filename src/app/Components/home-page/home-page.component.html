@@ -1,0 +1,33 @@
+<!-------------------Componente contenedor de la aplicacion---------------->
+<!-------Contenedor de la aplicacion------------------>
+<div class="container-fluid">
+
+    <!------Contenedor de Columnas para dividir el sidebar y el contenido de la app -->
+    <div class="row flex-nowrap">
+
+        <!----Sidebar container -->
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+
+            <!--------Componente Sidebar------>
+            <app-sidebar-page></app-sidebar-page>
+
+        </div>
+
+        <!--Contenedor de contenidos de la aplicacion-->
+        <div class="col py-3 ">
+
+            <!--Componente estatico de nav-->
+            <app-nav-page></app-nav-page>
+
+
+            <!--Componentes Dinamicos de navegacion-->
+           <router-outlet></router-outlet>
+
+           <br><br><br><br>
+           
+            <!--Componente estatico de sidebar-->
+            <app-footer-page></app-footer-page>
+
+        </div>
+    </div>
+</div>

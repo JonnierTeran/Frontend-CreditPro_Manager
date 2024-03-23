@@ -2,11 +2,11 @@ export class AdministratorModels {
     
     //Atributtes
     public identificacion:number;
-    private name: string;
-    private lastName:string;
+    public name: string;
+    public lastName:string;
     public password:string;
-    private user:string;
-    private apiKeyResend?:string;
+    public user:string;
+    public apiKeyResend?:string;
 
   
     //Constructor Method

@@ -54,7 +54,7 @@
                 <div class="card bg-glass">
                     <div class="card-body px-4 py-5 px-md-5">
 
-                        <!-------------Inicio de Formularioo --------------------------------------->
+                        <!-------------Inicio de Formulario Reactivo --------------------------------------->
                         <form [formGroup]="singUpForm" (ngSubmit)="registrarAdmin()">
 
                             <h4 class="text-center ">REGISTRO DE ADMINISTRADORES</h4>
@@ -129,16 +129,23 @@
                                             <div id="collapseOne" class="accordion-collapse collapse"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <strong>OPCIONAL - Esta APIKEY sera necesaria para restablecer su contraseña en caso de olvidarla</strong>  <br> <hr>
+                                                    <strong>OPCIONAL - Esta APIKEY sera necesaria para restablecer su
+                                                        contraseña en caso de olvidarla</strong> <br>
+                                                    <hr>
                                                     - Obtener una API Key de Resend en 4 pasos: <br>
-                                                    1️⃣- Crea una cuenta: Regístrate en <a href="https://resend.com/" target="_blank">https://resend.com/</a>. <br>
+                                                    1️⃣- Crea una cuenta: Regístrate en <a href="https://resend.com/"
+                                                        target="_blank">https://resend.com/</a>. <br>
                                                     2️⃣- Accede al panel de control: Inicia sesión > nombre > "Panel de
                                                     control". <br>
-                                                    3️⃣- Crea una API Key: "API Keys" > "Crear API Key" > nombre y permisos >
+                                                    3️⃣- Crea una API Key: "API Keys" > "Crear API Key" > nombre y
+                                                    permisos >
                                                     Guardar. <br>
-                                                    
-                                                    4️⃣- Usa tu API Key: Integra Resend aqui copiando el codigo o apikey generado y si necesitas información consulta la documentación:
-                                                    <a href="https://resend.com/docs/api-reference/introduction">https://resend.com/docs/api-reference/introduction</a> .
+
+                                                    4️⃣- Usa tu API Key: Integra Resend aqui copiando el codigo o apikey
+                                                    generado y si necesitas información consulta la documentación:
+                                                    <a
+                                                        href="https://resend.com/docs/api-reference/introduction">https://resend.com/docs/api-reference/introduction</a>
+                                                    .
                                                 </div>
                                             </div>
                                         </div>
@@ -168,6 +175,8 @@
                             </div>
 
                         </form>
+
+                        <!--Fin reactive Forms----------->
                     </div>
                 </div>
             </div>
